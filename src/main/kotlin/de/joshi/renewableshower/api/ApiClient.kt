@@ -1,7 +1,15 @@
 package de.joshi.renewableshower.api
 
-interface ApiClient {
-    fun getAvailableLocales(filterIds: FilterIds, resolution: DataResolution): Map<*, *>
+import de.joshi.renewableshower.model.EnergyDataSlice
+import de.joshi.renewableshower.model.EnergyMeasurement
+import java.util.*
 
-    fun getPowerProductionInformation(filterIds: FilterIds, resolution: DataResolution): String
+interface ApiClient {
+    fun getAvailableTimestamps(energyForm: EnergyForm): List<Date>
+    fun getLatestAvailableTimestamp(energyForm: EnergyForm): Date
+
+    fun getActualLatestTimestamp(): Date
+
+    fun getEnergyProductionData(energyForm: EnergyForm, timestamp: Date): EnergyDataSlice
+    fun getLatestEnergyMeasurement(energyForm: EnergyForm, timestamp: Date): EnergyMeasurement
 }
