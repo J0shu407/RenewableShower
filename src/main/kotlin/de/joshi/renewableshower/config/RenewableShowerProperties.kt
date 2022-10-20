@@ -9,10 +9,17 @@ import org.springframework.stereotype.Component
 @ConfigurationProperties(prefix = "shower")
 open class RenewableShowerProperties {
     var api: Api = Api()
+    var persistence: Persistence = Persistence()
+
     class Api {
         var data: Data = Data()
         class Data {
             var resolution: DataResolution = DataResolution.QUARTERHOUR
         }
+    }
+
+    class Persistence {
+        var databaseSecrets: String = ""
+        var databaseUrl: String = ""
     }
 }
