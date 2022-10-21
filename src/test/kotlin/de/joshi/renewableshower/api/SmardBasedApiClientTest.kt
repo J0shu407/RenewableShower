@@ -78,7 +78,19 @@ class SmardBasedApiClientTest {
     }
 
     @Test
-    fun getPowerProductionInformationSuccessfully() {
+    fun getNearestPossibleTimestamp() {
+        val client: ApiClient = SmardBasedApiClient(ObjectMapper(), properties)
+        properties.api = RenewableShowerProperties.Api()
+        properties.api.data = RenewableShowerProperties.Api.Data()
+        properties.api.data.resolution = DataResolution.QUARTERHOUR
+
+        assertEquals(Date(1665957600000), client.getNearestPossibleTimestamp(Date(1665957600000)))
+        assertEquals(Date(1665957600000), client.getNearestPossibleTimestamp(Date(1665957000000)))
+        assertEquals(Date(1470002400000), client.getNearestPossibleTimestamp(Date(1470200000000)))
+    }
+
+    @Test
+    fun getEnergyProductionDataSuccessfully() {
 
         assertEquals(
             energyData,
@@ -87,7 +99,7 @@ class SmardBasedApiClientTest {
     }
 
     @Test
-    fun getLatestPowerProductionInformationSuccessfully() {
+    fun getLatestEnergyMeasurementSuccessfully() {
 
         assertEquals(Date(1234L), apiClient.getLatestEnergyMeasurement(EnergyForm.HYDRO, Date(1649023200000)).timestamp)
         assertEquals(BigDecimal(2), apiClient.getLatestEnergyMeasurement(EnergyForm.HYDRO, Date(1649023200000)).value)

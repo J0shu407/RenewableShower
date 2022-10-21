@@ -6,15 +6,16 @@ import java.math.BigDecimal
 import java.util.Date
 
 class CompleteEnergyData(
+
     @JsonProperty("timestamp")
-    val time: Date,
+    val time: Long,
     @JsonProperty("total_production")
     val totalProduction: BigDecimal,
-    @JsonProperty("protion_of_renewables")
+    @JsonProperty("portion_of_renewables")
     val portionOfRenewables: BigDecimal,
-    @JsonProperty("protion_of_conventionales")
+    @JsonProperty("portion_of_conventionales")
     val portionOfConventionales: BigDecimal,
 
-    val energyMeasurements: Map<EnergyForm, BigDecimal>
-) {
-}
+    @JsonProperty("energy_measurements")
+    val energyMeasurements: MutableMap<String, BigDecimal>
+)

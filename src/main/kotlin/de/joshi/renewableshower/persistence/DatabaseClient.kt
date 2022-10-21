@@ -9,7 +9,6 @@ interface DatabaseClient {
     fun setLatestPortionOfRenewables(portion: BigDecimal)
     fun setLatestPortionOfConventionales(portion: BigDecimal)
     fun setLatestTimestamp(date: Date)
-    fun setLatestEnergyData(completeEnergyData: CompleteEnergyData)
 
     fun addInformation(completeEnergyData: CompleteEnergyData)
 }

@@ -6,9 +6,11 @@ import com.google.firebase.FirebaseOptions
 import com.google.firebase.database.FirebaseDatabase
 import de.joshi.renewableshower.persistence.DatabaseClient
 import de.joshi.renewableshower.persistence.FirebaseClient
+import org.slf4j.LoggerFactory
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import java.io.FileInputStream
+import java.util.logging.Logger
 
 @Configuration
 open class RenewableShowerConfiguration(val properties: RenewableShowerProperties) {
@@ -30,8 +32,4 @@ open class RenewableShowerConfiguration(val properties: RenewableShowerPropertie
         return FirebaseDatabase.getInstance(firebaseApp)
     }
 
-    @Bean
-    open fun databaseClient(firebaseDatabase: FirebaseDatabase): DatabaseClient {
-        return FirebaseClient(firebaseDatabase)
-    }
 }

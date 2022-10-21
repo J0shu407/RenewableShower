@@ -5,16 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a1300d98-4235-4514-ace9-957e551aa7b1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/de/joshi/renewableshower/model/CompleteEnergyData.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/de/joshi/renewableshower/persistence/DatabaseClient.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/de/joshi/renewableshower/persistence/DatabaseModel.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/de/joshi/renewableshower/persistence/FirebaseClient.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/de/joshi/renewableshower/api/ApiClient.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/de/joshi/renewableshower/api/ApiClient.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/de/joshi/renewableshower/api/SmardBasedApiClient.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/de/joshi/renewableshower/api/SmardBasedApiClient.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/de/joshi/renewableshower/cli/RenewableShowerCLI.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/de/joshi/renewableshower/cli/RenewableShowerCLI.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/de/joshi/renewableshower/config/RenewableShowerConfiguration.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/de/joshi/renewableshower/config/RenewableShowerConfiguration.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/de/joshi/renewableshower/config/RenewableShowerProperties.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/de/joshi/renewableshower/config/RenewableShowerProperties.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/de/joshi/renewableshower/data/DataProcessing.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/de/joshi/renewableshower/data/DataProcessing.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/de/joshi/renewableshower/model/CompleteEnergyData.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/de/joshi/renewableshower/model/CompleteEnergyData.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/de/joshi/renewableshower/model/EnergyDataSlice.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/de/joshi/renewableshower/model/EnergyDataSlice.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/de/joshi/renewableshower/persistence/DatabaseClient.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/de/joshi/renewableshower/persistence/DatabaseClient.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/de/joshi/renewableshower/persistence/FirebaseClient.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/de/joshi/renewableshower/persistence/FirebaseClient.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/de/joshi/renewableshower/api/SmardBasedApiClientTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/de/joshi/renewableshower/api/SmardBasedApiClientTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/de/joshi/renewableshower/data/DataProcessingTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/de/joshi/renewableshower/data/DataProcessingTest.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,17 +49,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "last_opened_file_path": "/home/joshi/Projekte/RenewableShower/src/main/resources"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/joshi/Projekte/RenewableShower/src/main/resources&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources" />
@@ -76,7 +79,23 @@
     </key>
   </component>
   <component name="RunManager" selected="Kotlin.RenewableShowerApplicationKt">
-    <configuration name="SmardBasedApiClientTest.getLatestAvailableTimestampSuccessfully" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DataProcessingTest.getCompleteEnergyDataSuccessfully" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RenewableShower" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="de.joshi.renewableshower.data.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="de.joshi.renewableshower.data" />
+      <option name="MAIN_CLASS_NAME" value="de.joshi.renewableshower.data.DataProcessingTest" />
+      <option name="METHOD_NAME" value="getCompleteEnergyDataSuccessfully" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SmardBasedApiClientTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RenewableShower" />
       <extension name="coverage">
         <pattern>
@@ -86,13 +105,12 @@
       </extension>
       <option name="PACKAGE_NAME" value="de.joshi.renewableshower.api" />
       <option name="MAIN_CLASS_NAME" value="de.joshi.renewableshower.api.SmardBasedApiClientTest" />
-      <option name="METHOD_NAME" value="getLatestAvailableTimestampSuccessfully" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SmardBasedApiClientTest.getLatestPowerProductionInformationSuccessfully" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SmardBasedApiClientTest.getActualLatestTimestampSuccessfully" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RenewableShower" />
       <extension name="coverage">
         <pattern>
@@ -102,13 +120,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="de.joshi.renewableshower.api" />
       <option name="MAIN_CLASS_NAME" value="de.joshi.renewableshower.api.SmardBasedApiClientTest" />
-      <option name="METHOD_NAME" value="getLatestPowerProductionInformationSuccessfully" />
+      <option name="METHOD_NAME" value="getActualLatestTimestampSuccessfully" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SmardBasedApiClientTest.getPowerProductionInformationSuccessfully" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SmardBasedApiClientTest.getNearestPossibleTimestamp" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RenewableShower" />
       <extension name="coverage">
         <pattern>
@@ -118,16 +136,8 @@
       </extension>
       <option name="PACKAGE_NAME" value="de.joshi.renewableshower.api" />
       <option name="MAIN_CLASS_NAME" value="de.joshi.renewableshower.api.SmardBasedApiClientTest" />
-      <option name="METHOD_NAME" value="getPowerProductionInformationSuccessfully" />
+      <option name="METHOD_NAME" value="getNearestPossibleTimestamp" />
       <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="kotlin in RenewableShower" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="RenewableShower" />
-      <option name="TEST_OBJECT" value="directory" />
-      <dir value="$PROJECT_DIR$/src/test/kotlin" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -153,10 +163,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Kotlin.RenewableShowerApplicationKt" />
-        <item itemvalue="JUnit.kotlin in RenewableShower" />
-        <item itemvalue="JUnit.SmardBasedApiClientTest.getLatestPowerProductionInformationSuccessfully" />
-        <item itemvalue="JUnit.SmardBasedApiClientTest.getPowerProductionInformationSuccessfully" />
-        <item itemvalue="JUnit.SmardBasedApiClientTest.getLatestAvailableTimestampSuccessfully" />
+        <item itemvalue="JUnit.SmardBasedApiClientTest.getNearestPossibleTimestamp" />
+        <item itemvalue="JUnit.DataProcessingTest.getCompleteEnergyDataSuccessfully" />
+        <item itemvalue="JUnit.SmardBasedApiClientTest" />
+        <item itemvalue="JUnit.SmardBasedApiClientTest.getActualLatestTimestampSuccessfully" />
       </list>
     </recent_temporary>
   </component>

@@ -17,7 +17,7 @@ class EnergyDataSlice(
 
 class EnergyMetaData(
     @JsonProperty("version")
-    var  version: Int?,
+    var version: Int?,
     @JsonProperty("created")
     var created: Long?
 )

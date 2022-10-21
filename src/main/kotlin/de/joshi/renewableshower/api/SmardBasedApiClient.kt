@@ -3,16 +3,21 @@ package de.joshi.renewableshower.api
 import com.fasterxml.jackson.databind.ObjectMapper
 import de.joshi.renewableshower.model.EnergyDataSlice
 import de.joshi.renewableshower.config.RenewableShowerProperties
+import de.joshi.renewableshower.data.DataProcessing
 import de.joshi.renewableshower.model.EnergyMeasurement
+import org.slf4j.Logger
+import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Component
 import java.net.URI
 import java.net.URL
 import java.net.URLConnection
 import java.net.http.HttpRequest
 import java.util.*
+import kotlin.math.abs
 
 @Component
 class SmardBasedApiClient(val mapper: ObjectMapper, val properties: RenewableShowerProperties) : ApiClient {
+    val LOGGER: Logger = LoggerFactory.getLogger(SmardBasedApiClient::class.java)
 
     override fun getAvailableTimestamps(energyForm: EnergyForm): List<Date> {
         val connection: URLConnection =
@@ -46,6 +51,20 @@ class SmardBasedApiClient(val mapper: ObjectMapper, val properties: RenewableSho
         ).timestamp!!
     }
 
+    override fun getNearestPossibleTimestamp(timestamp: Date): Date {
+        val possibleTimestamps: List<Date> = getAvailableTimestamps(EnergyForm.HYDRO)
+        var nearestTimestamp = possibleTimestamps[0]
+
+        for (possibleTimestamp in possibleTimestamps) {
+            if(abs((possibleTimestamp.time - timestamp.time)) < abs(nearestTimestamp.time - timestamp.time)) {
+                nearestTimestamp = possibleTimestamp
+            }
+        }
+
+        LOGGER.info("Original Timestamp: ${timestamp.time}, Nearest possible timestamp: ${nearestTimestamp.time}")
+        return nearestTimestamp
+    }
+
     override fun getEnergyProductionData(energyForm: EnergyForm, timestamp: Date): EnergyDataSlice {
         val connection: URLConnection =
             URL("https://smard.api.proxy.bund.dev/app/chart_data/${energyForm.id}/DE/${energyForm.id}_DE_${properties.api.data.resolution.name}_${timestamp.time}.json").openConnection()
@@ -77,5 +96,11 @@ class SmardBasedApiClient(val mapper: ObjectMapper, val properties: RenewableSho
             }
         }
         return values.measurements!![i - 1]
+    }
+
+    override fun getExactEnergyMeasurement(energyForm: EnergyForm, timestamp: Date): EnergyMeasurement {
+
+        val values: EnergyDataSlice = getEnergyProductionData(energyForm, timestamp)
+        return values.measurements!![0]
     }
 }
