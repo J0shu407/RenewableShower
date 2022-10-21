@@ -13,8 +13,8 @@ import de.joshi.renewableshower.persistence.DatabaseModel
 import org.springframework.boot.CommandLineRunner
 import org.springframework.stereotype.Component
 import java.math.BigDecimal
+import java.security.KeyStore
 import java.util.Date
-
 
 @Component
 class RenewableShowerCLI(
@@ -24,6 +24,11 @@ class RenewableShowerCLI(
 ) : CommandLineRunner {
 
     override fun run(vararg args: String?) {
+
+        databaseClient.setLatestTotalProduction(dataProcessing.getTotalProduction(apiClient.getActualLatestTimestamp()))
+        databaseClient.setLatestPortionOfRenewables(dataProcessing.getPortionOfWholeProduction(EnergyForm.RENEWABLES, apiClient.getActualLatestTimestamp()))
+        databaseClient.setLatestPortionOfConventionales(dataProcessing.getPortionOfWholeProduction(EnergyForm.CONVENTIONAL, apiClient.getActualLatestTimestamp()))
+        databaseClient.setLatestTimestamp(apiClient.getActualLatestTimestamp())
 
         databaseClient.addInformation(
             dataProcessing.getCompleteEnergyData(Date(1662937200000))

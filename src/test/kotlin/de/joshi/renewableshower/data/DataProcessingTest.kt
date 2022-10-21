@@ -1,5 +1,6 @@
 package de.joshi.renewableshower.data
 
+import com.google.api.client.util.DateTime
 import de.joshi.renewableshower.api.ApiClient
 import de.joshi.renewableshower.api.DataResolution
 import de.joshi.renewableshower.api.EnergyForm
@@ -17,6 +18,7 @@ import org.mockito.Mockito.`when`
 import org.mockito.MockitoAnnotations.openMocks
 import java.math.BigDecimal
 import java.math.MathContext
+import java.text.DateFormat
 import java.util.*
 
 class DataProcessingTest {
@@ -60,7 +62,7 @@ class DataProcessingTest {
         ).thenReturn(EnergyMeasurement().apply { timestamp = Date(0); value = BigDecimal(4.0) })
         `when`(
             apiClient.getNearestPossibleTimestamp(
-                Date(10)
+                any(Date::class.java)
             )
         ).thenReturn(Date(100))
         `when`(
@@ -69,6 +71,12 @@ class DataProcessingTest {
                 any(Date::class.java)
             )
         ).thenReturn(energyData)
+        `when`(
+            apiClient.getExactEnergyMeasurement(
+                any(EnergyForm::class.java),
+                any(Date::class.java)
+            )
+        ).thenReturn(EnergyMeasurement().apply { timestamp = Date(0); value = BigDecimal(4.0) })
     }
 
     @Test
@@ -76,7 +84,7 @@ class DataProcessingTest {
 
         assertEquals(
             BigDecimal(4.0) / BigDecimal(48),
-            dataProcessing.getPortionOfWholeProduction(EnergyForm.HYDRO)
+            dataProcessing.getPortionOfWholeProduction(EnergyForm.HYDRO, Date(10))
         )
     }
 
@@ -84,19 +92,19 @@ class DataProcessingTest {
     fun getMultiplePortionOfWholeProductionSuccessfully() {
         assertEquals(
             (BigDecimal(4.0) / BigDecimal(48)) * BigDecimal(EnergyForm.RENEWABLES.size),
-            dataProcessing.getPortionOfWholeProduction(EnergyForm.RENEWABLES)
+            dataProcessing.getPortionOfWholeProduction(EnergyForm.RENEWABLES, Date(10))
         )
     }
 
     @Test
     fun getTotalProductionSuccessfully() {
 
-        assertEquals(BigDecimal(4) * BigDecimal(EnergyForm.values().size), dataProcessing.getTotalProduction())
+        assertEquals(BigDecimal(4) * BigDecimal(EnergyForm.values().size), dataProcessing.getTotalProduction(Date(10)))
     }
 
     @Test
     fun getCompleteEnergyDataSuccessfully() {
-        assertEquals(Date(100), dataProcessing.getCompleteEnergyData(Date(10)).time)
+        assertEquals(100, dataProcessing.getCompleteEnergyData(Date(10)).time)
         assertEquals(EnergyForm.values().size, dataProcessing.getCompleteEnergyData(Date(10)).energyMeasurements.size)
     }
 

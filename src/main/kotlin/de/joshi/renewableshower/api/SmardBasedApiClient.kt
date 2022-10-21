@@ -61,7 +61,6 @@ class SmardBasedApiClient(val mapper: ObjectMapper, val properties: RenewableSho
             }
         }
 
-        LOGGER.info("Original Timestamp: ${timestamp.time}, Nearest possible timestamp: ${nearestTimestamp.time}")
         return nearestTimestamp
     }
 
@@ -86,14 +85,14 @@ class SmardBasedApiClient(val mapper: ObjectMapper, val properties: RenewableSho
         val values: EnergyDataSlice = getEnergyProductionData(energyForm, timestamp)
 
         var i: Int = 0
-        run breaking@{
-            values.measurements!!.forEach { list ->
-                if (list.value == null) {
-                    return@breaking
-                } else {
-                    i++;
-                }
+        for(measurement in values.measurements!!) {
+
+            if (measurement.value == null) {
+                break
+            } else {
+                i++
             }
+
         }
         return values.measurements!![i - 1]
     }

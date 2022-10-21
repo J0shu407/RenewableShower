@@ -5,18 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a1300d98-4235-4514-ace9-957e551aa7b1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/kotlin/de/joshi/renewableshower/persistence/FirebaseClientTest.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/de/joshi/renewableshower/api/ApiClient.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/de/joshi/renewableshower/api/ApiClient.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/de/joshi/renewableshower/api/SmardBasedApiClient.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/de/joshi/renewableshower/api/SmardBasedApiClient.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/de/joshi/renewableshower/cli/RenewableShowerCLI.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/de/joshi/renewableshower/cli/RenewableShowerCLI.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/de/joshi/renewableshower/config/RenewableShowerConfiguration.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/de/joshi/renewableshower/config/RenewableShowerConfiguration.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/de/joshi/renewableshower/data/DataProcessing.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/de/joshi/renewableshower/data/DataProcessing.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/de/joshi/renewableshower/model/CompleteEnergyData.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/de/joshi/renewableshower/model/CompleteEnergyData.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/de/joshi/renewableshower/model/EnergyDataSlice.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/de/joshi/renewableshower/model/EnergyDataSlice.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/de/joshi/renewableshower/persistence/DatabaseClient.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/de/joshi/renewableshower/persistence/DatabaseClient.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/de/joshi/renewableshower/persistence/FirebaseClient.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/de/joshi/renewableshower/persistence/FirebaseClient.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/de/joshi/renewableshower/api/SmardBasedApiClientTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/de/joshi/renewableshower/api/SmardBasedApiClientTest.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/kotlin/de/joshi/renewableshower/data/DataProcessingTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/de/joshi/renewableshower/data/DataProcessingTest.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -28,10 +20,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin Enum" />
-        <option value="JUnit5 Test Class" />
         <option value="Class" />
         <option value="Kotlin Interface" />
         <option value="Kotlin Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -74,77 +66,95 @@
       <recent name="de.joshi.renewableshower.api" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="de.joshi.renewableshower.persistence" />
       <recent name="de.joshi.renewableshower.data" />
       <recent name="de.joshi.renewableshower.api" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.RenewableShowerApplicationKt">
-    <configuration name="DataProcessingTest.getCompleteEnergyDataSuccessfully" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="MavenRunConfiguration" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.FirebaseClientTest.addInformationSuccessfully">
+    <configuration name="FirebaseClientTest.addInformationSuccessfully" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RenewableShower" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="de.joshi.renewableshower.data.*" />
+          <option name="PATTERN" value="de.joshi.renewableshower.persistence.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="de.joshi.renewableshower.data" />
-      <option name="MAIN_CLASS_NAME" value="de.joshi.renewableshower.data.DataProcessingTest" />
-      <option name="METHOD_NAME" value="getCompleteEnergyDataSuccessfully" />
+      <option name="PACKAGE_NAME" value="de.joshi.renewableshower.persistence" />
+      <option name="MAIN_CLASS_NAME" value="de.joshi.renewableshower.persistence.FirebaseClientTest" />
+      <option name="METHOD_NAME" value="addInformationSuccessfully" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SmardBasedApiClientTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FirebaseClientTest.setLatestPortionOfConventionalesSuccessfully" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RenewableShower" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="de.joshi.renewableshower.api.*" />
+          <option name="PATTERN" value="de.joshi.renewableshower.persistence.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="de.joshi.renewableshower.api" />
-      <option name="MAIN_CLASS_NAME" value="de.joshi.renewableshower.api.SmardBasedApiClientTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SmardBasedApiClientTest.getActualLatestTimestampSuccessfully" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="RenewableShower" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="de.joshi.renewableshower.api.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="de.joshi.renewableshower.api" />
-      <option name="MAIN_CLASS_NAME" value="de.joshi.renewableshower.api.SmardBasedApiClientTest" />
-      <option name="METHOD_NAME" value="getActualLatestTimestampSuccessfully" />
+      <option name="PACKAGE_NAME" value="de.joshi.renewableshower.persistence" />
+      <option name="MAIN_CLASS_NAME" value="de.joshi.renewableshower.persistence.FirebaseClientTest" />
+      <option name="METHOD_NAME" value="setLatestPortionOfConventionalesSuccessfully" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SmardBasedApiClientTest.getNearestPossibleTimestamp" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FirebaseClientTest.setLatestPortionOfRenewablesSuccessfully" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RenewableShower" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="de.joshi.renewableshower.api.*" />
+          <option name="PATTERN" value="de.joshi.renewableshower.persistence.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="de.joshi.renewableshower.api" />
-      <option name="MAIN_CLASS_NAME" value="de.joshi.renewableshower.api.SmardBasedApiClientTest" />
-      <option name="METHOD_NAME" value="getNearestPossibleTimestamp" />
+      <option name="PACKAGE_NAME" value="de.joshi.renewableshower.persistence" />
+      <option name="MAIN_CLASS_NAME" value="de.joshi.renewableshower.persistence.FirebaseClientTest" />
+      <option name="METHOD_NAME" value="setLatestPortionOfRenewablesSuccessfully" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RenewableShowerApplicationKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="de.joshi.renewableshower.RenewableShowerApplicationKt" />
+    <configuration name="FirebaseClientTest.setLatestTimestampSuccessfully" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RenewableShower" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="de.joshi.renewableshower.persistence.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="de.joshi.renewableshower.persistence" />
+      <option name="MAIN_CLASS_NAME" value="de.joshi.renewableshower.persistence.FirebaseClientTest" />
+      <option name="METHOD_NAME" value="setLatestTimestampSuccessfully" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FirebaseClientTest.setLatestTotalProductionSuccessfully" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RenewableShower" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="de.joshi.renewableshower.persistence.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="de.joshi.renewableshower.persistence" />
+      <option name="MAIN_CLASS_NAME" value="de.joshi.renewableshower.persistence.FirebaseClientTest" />
+      <option name="METHOD_NAME" value="setLatestTotalProductionSuccessfully" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -162,11 +172,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Kotlin.RenewableShowerApplicationKt" />
-        <item itemvalue="JUnit.SmardBasedApiClientTest.getNearestPossibleTimestamp" />
-        <item itemvalue="JUnit.DataProcessingTest.getCompleteEnergyDataSuccessfully" />
-        <item itemvalue="JUnit.SmardBasedApiClientTest" />
-        <item itemvalue="JUnit.SmardBasedApiClientTest.getActualLatestTimestampSuccessfully" />
+        <item itemvalue="JUnit.FirebaseClientTest.addInformationSuccessfully" />
+        <item itemvalue="JUnit.FirebaseClientTest.setLatestTimestampSuccessfully" />
+        <item itemvalue="JUnit.FirebaseClientTest.setLatestPortionOfConventionalesSuccessfully" />
+        <item itemvalue="JUnit.FirebaseClientTest.setLatestPortionOfRenewablesSuccessfully" />
+        <item itemvalue="JUnit.FirebaseClientTest.setLatestTotalProductionSuccessfully" />
       </list>
     </recent_temporary>
   </component>
@@ -180,5 +190,16 @@
       <updated>1666098803410</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/de/joshi/renewableshower/data/DataProcessing.kt</url>
+          <line>51</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
