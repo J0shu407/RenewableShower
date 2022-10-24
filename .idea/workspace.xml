@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a1300d98-4235-4514-ace9-957e551aa7b1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/kotlin/de/joshi/renewableshower/persistence/FirebaseClientTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/de/joshi/renewableshower/api/SmardBasedApiClient.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/de/joshi/renewableshower/api/SmardBasedApiClient.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/de/joshi/renewableshower/cli/RenewableShowerCLI.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/de/joshi/renewableshower/cli/RenewableShowerCLI.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/de/joshi/renewableshower/data/DataProcessingTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/de/joshi/renewableshower/data/DataProcessingTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,17 +40,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/joshi/Projekte/RenewableShower/src/main/resources&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "last_opened_file_path": "/home/joshi/Documents/Programming/java/RenewableShower",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "terminal"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources" />
@@ -78,7 +81,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.FirebaseClientTest.addInformationSuccessfully">
+  <component name="RunManager" selected="Kotlin.RenewableShowerApplicationKt">
     <configuration name="FirebaseClientTest.addInformationSuccessfully" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RenewableShower" />
       <extension name="coverage">
@@ -143,40 +146,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FirebaseClientTest.setLatestTotalProductionSuccessfully" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RenewableShowerApplicationKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="de.joshi.renewableshower.RenewableShowerApplicationKt" />
       <module name="RenewableShower" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="de.joshi.renewableshower.persistence.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="de.joshi.renewableshower.persistence" />
-      <option name="MAIN_CLASS_NAME" value="de.joshi.renewableshower.persistence.FirebaseClientTest" />
-      <option name="METHOD_NAME" value="setLatestTotalProductionSuccessfully" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <option name="filePath" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.RenewableShowerApplicationKt" />
         <item itemvalue="JUnit.FirebaseClientTest.addInformationSuccessfully" />
         <item itemvalue="JUnit.FirebaseClientTest.setLatestTimestampSuccessfully" />
         <item itemvalue="JUnit.FirebaseClientTest.setLatestPortionOfConventionalesSuccessfully" />
         <item itemvalue="JUnit.FirebaseClientTest.setLatestPortionOfRenewablesSuccessfully" />
-        <item itemvalue="JUnit.FirebaseClientTest.setLatestTotalProductionSuccessfully" />
       </list>
     </recent_temporary>
   </component>
@@ -191,6 +174,17 @@
     </task>
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
@@ -201,5 +195,9 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
