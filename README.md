@@ -1,4 +1,4 @@
-## RenewableShower
+# RenewableShower
 RenewableShower is a project aiming to maximise 
 the efficiency and eco-friendliness of energy consumption by using a
 traffic light system to show when enough renewable energy is in the network
